@@ -1,0 +1,249 @@
+* {
+  position: relative;
+}
+
+a, a:hover, a:active, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  background-color:
+}
+
+h2 {
+  font-size: 21pt;
+}
+
+h3 {
+  font-size: 12pt;
+}
+
+.navbar {
+  z-index: 2000;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.bg-green {
+  background-color: #7E912D;
+}
+
+.text-green {
+  color: #7E912D;
+}
+
+.bg-orange {
+  background-color: #e27a24;
+}
+
+.text-orange {
+  color: #e27a24;
+}
+
+.bg-gray {
+  background-color: #e9ecef;
+}
+
+.text-gray {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.border-green {
+  border-color: #7E912D !important;
+}
+
+.flip-x {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.flip-y {
+  -webkit-transform: scalet(-1);
+  transform: scalet(-1);
+  -webkit-filter: FlipV;
+          filter: FlipV;
+  -ms-filter: "FlipV";
+}
+
+.m-auto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.w-30 {
+  width: 30vw;
+  max-width: 200px;
+}
+
+.h-30w {
+  height: 30vw;
+  max-height: 200px;
+}
+
+.w-45 {
+  width: 45vw;
+}
+
+.h-45w {
+  height: 45vw;
+}
+
+header svg {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+.planting-date svg {
+  height: 50px;
+  width: 50px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.mw-250px {
+  max-width: 250px;
+}
+
+.mh-250px {
+  max-height: 250px;
+}
+
+.p-30px {
+  padding: 30px;
+}
+
+.pt-4r {
+  padding-top: 4rem !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
+.btn-outline-light:hover {
+  color: #7E912D;
+}
+
+.parrow {
+  float: left;
+  border: solid;
+  display: block;
+  padding: 0.25rem;
+}
+
+.parrow-down {
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg) translateY(100%);
+          transform: rotate(45deg) translateY(100%);
+}
+
+.parrow-up {
+  border-width: 3px 3px 0 0;
+  -webkit-transform: rotate(-45deg) translate(-150%, 50%);
+          transform: rotate(-45deg) translate(-150%, 50%);
+}
+
+.progress {
+  overflow: visible;
+}
+
+.bar-limit {
+  margin-top: -20px;
+  z-index: -1;
+}
+
+.bar-step, .bar-limit {
+  position: absolute;
+  top: 0;
+  font-size:12px;
+  padding: 0;
+}
+
+.label-left {
+  float: left;
+}
+
+.bar-step .label-left, .bar-step .label-right {
+  margin-top: 16px;
+}
+
+.label-line {
+  height: 36px;
+	width: 2px;
+}
+
+.label-right {
+  float: right;
+  margin-left: 7px;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: rgba(0, 0, 0, 0.10);
+  padding: 5px;
+  min-width: 40px;
+  color: rgb(23,44,66);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.tooltip .arrow::before {
+  margin-left: 100%;
+  border-width: .4rem .4rem 0;
+  border-top-color: rgba(0, 0, 0, 0.10);
+}
+
+button svg, .d-flex:not(.planting-date):not(header) svg {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.votes {
+  font-size: 10pt;
+  cursor: pointer;
+  line-height: 30px;
+}
+
+form textarea {
+  min-height: 50px;
+  max-height: 500px;
+}
+
+.comment textarea {
+  max-height: 250px;
+}
+
+.answers {
+  font-size: 11pt;
+}
+
+aside {
+  font-size: 10pt;
+}

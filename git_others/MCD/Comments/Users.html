@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>CATEGORIES</span> (
+    <span class='primary'>category_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>description</span>,
+    <span class='normal'>image</span>
+  )
+</div>
+<div>
+  <span class='relation'>SIZES</span> (
+    <span class='primary'>size_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>min_size</span>,
+    <span class='normal'>max_size</span>
+  )
+</div>
+<div>
+  <span class='relation'>HISTORIES</span> (
+    <span class='primary'>history_id</span>,
+    <span class='normal'>datetime</span>,
+    <span class='normal'>temperature</span>,
+    <span class='normal'>humidity</span>,
+    <span class='normal'>light</span>,
+    <span class='normal'>is_flowering</span>,
+    <span class='normal'>is_fruiting</span>,
+    <span class='normal'>is_harvested</span>,
+    <span class='normal'>is_trimmed</span>,
+    <span class='normal'>plant_id</span>,
+    <span class='foreign'>plant_id.1</span>
+  )
+</div>
+<div>
+  <span class='relation'>SUBCATEGORIES</span> (
+    <span class='primary'>subcategory_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>description</span>,
+    <span class='normal'>min_temperature</span>,
+    <span class='normal'>max_temperature</span>,
+    <span class='normal'>min_humidity</span>,
+    <span class='normal'>max_humidity</span>,
+    <span class='normal'>min_light</span>,
+    <span class='normal'>max_light</span>,
+    <span class='normal'>size_id</span>,
+    <span class='normal'>category_id</span>,
+    <span class='foreign'>size_id.1</span>,
+    <span class='foreign'>category_id.1</span>
+  )
+</div>
+<div>
+  <span class='relation'>PLANTS</span> (
+    <span class='primary'>plant_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>temperature</span>,
+    <span class='normal'>humidity</span>,
+    <span class='normal'>light</span>,
+    <span class='normal'>planting_date</span>,
+    <span class='normal'>is_flowering</span>,
+    <span class='normal'>is_fruiting</span>,
+    <span class='normal'>is_harvested</span>,
+    <span class='normal'>is_trimmed</span>,
+    <span class='normal'>subcategory_id</span>,
+    <span class='normal'>user_id</span>,
+    <span class='foreign'>user_id.1</span>,
+    <span class='foreign'>subcategory_id.1</span>
+  )
+</div>
+<div>
+  <span class='relation'>PERIODS</span> (
+    <span class='primary'>period_id</span>,
+    <span class='normal'>type_id</span>,
+    <span class='normal'>start</span>,
+    <span class='normal'>end</span>,
+    <span class='normal'>subcategory_id</span>,
+    <span class='foreign'>type_id.1</span>,
+    <span class='foreign'>subcategory_id.1</span>
+  )
+</div>
+<div>
+  <span class='relation'>USERS</span> (
+    <span class='primary'>user_id</span>,
+    <span class='normal'>username</span>,
+    <span class='normal'>mail</span>,
+    <span class='normal'>password</span>
+  )
+</div>
+<div>
+  <span class='relation'>TYPES</span> (
+    <span class='primary'>type_id</span>,
+    <span class='normal'>name</span>
+  )
+</div>
+<div>
+  <span class='relation'>COMMENTS</span> (
+    <span class='primary'>comment_id</span>,
+    <span class='normal'>post_date</span>,
+    <span class='normal'>title</span>,
+    <span class='normal'>comment</span>,
+    <span class='normal'>answer_id</span>,
+    <span class='normal'>subcategory_id</span>,
+    <span class='normal'>user_id</span>,
+    <span class='foreign'>user_id.1</span>,
+    <span class='foreign'>subcategory_id.1</span>,
+    <span class='foreign'>comment_id.1</span>
+  )
+</div>
+<div>
+  <span class='relation'>VOTES</span> (
+    <span class='primary'>vote_id</span>,
+    <span class='normal'>type</span>,
+    <span class='normal'>comment_id</span>,
+    <span class='normal'>user_id</span>,
+    <span class='foreign'>comment_id.1</span>,
+    <span class='foreign'>user_id.1</span>
+  )
+</div>
+</div>
+</body>
+</html>

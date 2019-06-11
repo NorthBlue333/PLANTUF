@@ -1,0 +1,27 @@
+CATEGORIES: category_id, name, description, image
+CIF7, 11 SUBCATEGORIES, 0N SIZES
+SIZES: size_id, name, min_size, max_size
+CIF8, 11 HISTORIES, 0N PLANTS
+HISTORIES: history_id, datetime, temperature, humidity, light, is_flowering, is_fruiting, is_harvested, is_trimmed, plant_id
+:
+
+CIF3, 11 SUBCATEGORIES, 0N CATEGORIES
+SUBCATEGORIES: subcategory_id, name, description, min_temperature, max_temperature, min_humidity, max_humidity, min_light, max_light, size_id, category_id
+CIF5, 11 PLANTS, 0N SUBCATEGORIES
+PLANTS: plant_id, name, temperature, humidity, light, planting_date, is_flowering, is_fruiting, is_harvested, is_trimmed, subcategory_id, user_id
+CIF6, 11 PLANTS, 0N USERS
+:
+
+PERIODS: period_id, type_id, start, end, subcategory_id
+CIF9, 11 PERIODS, 0N SUBCATEGORIES
+CIF1, 11 COMMENTS, 0N SUBCATEGORIES
+CIF2, 11 COMMENTS, 0N USERS
+USERS: user_id, username, mail, password
+CIF11, 0N USERS, 11 VOTES
+
+CIF4, 0N TYPES, 11 PERIODS
+TYPES: type_id, name
+CIF, 01 COMMENTS, 0N COMMENTS
+COMMENTS: comment_id, post_date, title, comment, answer_id, subcategory_id, user_id
+CIF10, 11 VOTES, 0N COMMENTS
+VOTES: vote_id, type, comment_id, user_id
