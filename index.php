@@ -1,6 +1,7 @@
 <?php
 session_name('sess_theconnectedflower');
 session_start();
+date_default_timezone_set("Europe/Paris");
 
 require_once("_config/db.php");
 require_once("_config/functions.php");

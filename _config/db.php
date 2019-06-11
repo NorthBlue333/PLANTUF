@@ -1,7 +1,7 @@
 <?php
 $dsn = 'mysql:dbname=theconnectedflower;host=localhost;charset=utf8';
-$user = 'root';
-$password = 'root';
+$user = 'theconnectedflower';
+$password = 'th3c0nn3ct3dfl0w3r';
 
 try {
     $db = new PDO($dsn, $user, $password);

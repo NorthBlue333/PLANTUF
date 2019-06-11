@@ -14,6 +14,9 @@
           <a class="nav-link" href="?p=plants">My plants</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="?p=plantsinfo">All Plants info</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="?p=community">Community comments</a>
         </li>
         <li class="nav-item">
@@ -39,6 +42,9 @@
         break;
       case 'plants':
         require('connected/plants.php');
+        break;
+      case 'plantsinfo':
+        require('connected/plantinfo.php');
         break;
       case 'community':
         require('connected/community.php');

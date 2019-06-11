@@ -42,7 +42,7 @@ h3 {
 }
 
 .text-green {
-  color: #7E912D;
+  color: #7E912D !important;
 }
 
 .bg-orange {
@@ -246,4 +246,35 @@ form textarea {
 
 aside {
   font-size: 10pt;
+}
+
+.sizes {
+  height: 100px;
+}
+
+.sizes figure {
+  position: absolute;
+  bottom: 0;
+}
+
+.sizes figure:not(.active) {
+  opacity: 0.25;
+}
+
+.sizes figure:first-of-type {
+  height: 90%;
+  left: 1rem;
+}
+
+.sizes figure:not(:last-of-type):not(:first-of-type) {
+  height: 60%;
+  left: 0.3rem;
+}
+
+.sizes figure:last-of-type {
+  height: 30%;
+}
+
+.sizes svg {
+  height: 100%;
 }

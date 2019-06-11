@@ -19,6 +19,20 @@ if(isset($_POST['fruiting']) && isset($_POST['plantid'])) {
   $insert->bindParam(':u_id', $_SESSION['user']['user_id'], PDO::PARAM_INT);
   $insert->execute();
 }
+if(isset($_POST['trimmed']) && isset($_POST['plantid'])) {
+  $insert = $db->prepare("UPDATE plants SET is_trimmed = :bool WHERE plant_id = :id AND user_id = :u_id");
+  $insert->bindParam(':bool', $_POST['trimmed'], PDO::PARAM_INT);
+  $insert->bindParam(':id', $_POST['plantid'], PDO::PARAM_INT);
+  $insert->bindParam(':u_id', $_SESSION['user']['user_id'], PDO::PARAM_INT);
+  $insert->execute();
+}
+if(isset($_POST['harvested']) && isset($_POST['plantid'])) {
+  $insert = $db->prepare("UPDATE plants SET is_harvested = :bool WHERE plant_id = :id AND user_id = :u_id");
+  $insert->bindParam(':bool', $_POST['harvested'], PDO::PARAM_INT);
+  $insert->bindParam(':id', $_POST['plantid'], PDO::PARAM_INT);
+  $insert->bindParam(':u_id', $_SESSION['user']['user_id'], PDO::PARAM_INT);
+  $insert->execute();
+}
 if(isset($_POST['delete']) && isset($_POST['plantid'])) {
   $insert = $db->prepare("DELETE FROM plants WHERE plant_id = :id AND user_id = :u_id");
   $insert->bindParam(':id', $_POST['plantid'], PDO::PARAM_INT);

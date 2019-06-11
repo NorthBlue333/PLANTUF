@@ -14,7 +14,8 @@ $('document').ready(function() {
   $('h2.desc').click(function() {
     $('[data-toggle="tooltip"]').tooltip('hide');
     $('[data-toggle="tooltip"]').tooltip('show');
-    $(this).closest('article').find('p').toggleClass('collapse');
+    $(this).closest('article').find('p').toggleClass('show');
+    $(this).closest('article').find('.sizes').toggleClass('show');
     $(this).find('.parrow').toggleClass('parrow-down');
     $(this).find('.parrow').toggleClass('parrow-up');
   });
