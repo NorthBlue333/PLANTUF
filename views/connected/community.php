@@ -100,7 +100,7 @@ if(count($comments) > 0) {
           <div class="float-right text-success votes mr-4"><i class="parrow parrow-up"></i><span><?= $answer['upvotes'] ?></span></div>
         </h4>
         <p class="mb-2">
-          <time><?= date('M jS, Y \a\t h:i A', strtotime($answer['post_date'])) ?></time> by <a class="font-italic" href="?p=community&user=<?= $answer['usernames'] ?>"><?= $answer['username'] ?></a>
+          <time><?= date('M jS, Y \a\t h:i A', strtotime($answer['post_date'])) ?></time> by <a class="font-italic" href="?p=community&user=<?= $answer['username'] ?>"><?= $answer['username'] ?></a>
         </p>
         <p><?= $answer['comment'] ?></p>
       </article>
